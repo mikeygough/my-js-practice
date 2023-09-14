@@ -36,6 +36,40 @@
     // The line above prints a message to the console. 
 
     // TODO: Print your own message to the console below: 
+    console.log('Oh hey there!');
+
+    // TODO: Make a new variable called name. Since this 
+    // variable is not going to change declare it with const
+    // Set it a string using the quotation marks. Something
+    // like: const name = 'Gimli'
+    const name = 'Mikey';
+
+    // This is all fun in the console but it would be better if we 
+    // could display something in the browser. To do this you 
+    // need a reference to an element in the DOM. 
+    
+    // To get a reference You will use some JS along with a selector 
+    // like you might use with CSS! Selectors traverse the DOM and 
+    // find the element or elements described by the selector!
+
+    const hello = document.querySelector('#hello');
+    // This isn't going to change so we used: const
+    
+    // TODO: Make a reference to div#name declare a variable for this 
+    // with const.
+    const htmlName = document.querySelector('#name');
+    console.log(htmlName);
+
+    // TODO: Make a reference to div#display
+    const htmlDisplay = document.querySelector('#display');
+    console.log(htmlDisplay);
+
+    // TODO: Define a function to update the score call it: updateScore
+    // Something like: function updateScore(points) { ... }
+    function updateScore(points) {
+      score += points
+      hello.innerHTML = `${name}: ${score}`;
+    }
 
     // Save this file to see the update in the browser. 
     // Remember the message will appear in the console! 
@@ -57,26 +91,21 @@
 
     // TODO: Give yourself another 500 points. Add 
     // 500 more points to score like this: score = score + 500
-
+    score = score + 500;
 
     // You can print your score to the console: 
 
     console.log(score);
 
     // TODO: Give yourself another 500 points. A shorthand
-    // x = x + 100 is x += 100. try that here: 
-
-
-    // TODO: Make a new variable called name. Since this 
-    // variable is not going to change declare it with const
-    // Set it a string using the quotation marks. Something
-    // like: const name = 'Gimli'
-
+    // x = x + 100 is x += 100. try that here:
+    updateScore(500);
 
 
     // TODO: Try changing your name. 
 
     // name = 'Frodo';
+    // name = 'Michael';
 
     // You should see an error in the console. 
 
@@ -97,17 +126,18 @@
 
     // TODO: If you set your name and didn't change it 
     // add 1550 points!
-
+    updateScore(1550);
 
     // Sometimes you'll want to display both a string and a variable. 
     // You can do this just like Python with the + operator!
     console.log('My Score is ' + score);
 
     // TODO: display your name and your score in the console:
-
+    console.log(name + score);
 
     // TODO: If you printed your name and your score give add 
     // another 750 points to your score!
+    updateScore(750);
 
     // TODO: Like Python's fstring JS has a template string. use it 
     // like this:
@@ -121,28 +151,20 @@
 
     // Change the string above so it prints your name and your score: 
     // `${name} has score: ${score}`
-
-    // This is all fun in the console but it would be better if we 
-    // could display something in the browser. To do this you 
-    // need a reference to an element in the DOM. 
-    
-    // To get a reference You will use some JS along with a selector 
-    // like you might use with CSS! Selectors traverse the DOM and 
-    // find the element or elements described by the selector!
-
-    const hello = document.querySelector('#hello');
-    // This isn't going to change so we used: const!
+    console.log(`${name}\'s score is: ${score}`);
 
     // TODO: Find this element yourself. Look for the tag with 
     // the attribute: id="hello"
     // If you found it add 1275 points to score.
+    updateScore(1275);
 
     // TODO: Use console.log() to log the hello variable to the console
     // Something like: console.log(hello)
-
+    console.log(hello);
 
     // You should see: <div id="hello"></div>
     // TODO: If you see this give yourself 10000 points!
+    updateScore(1000);
 
     // TODO: If you put something inside the tags you would see it 
     // in the browser. Currently the tag is empty. You are going to 
@@ -157,6 +179,7 @@
     // TODO: Make div#hello display your name and your score! 
     // Use the template string. Something like: 
     // someElement.innerHTML = `foo ${x} bar ${y}`
+    hello.innerHTML = `${name}: ${score}`;
 
 
     // TODO: The text is too small. Besides setting the content with 
@@ -164,7 +187,8 @@
 
     // Try this: 
     // hello.style.fontSize = '16px';
-    // You don't get any points for this because I'm giving you the answer! 
+    // You don't get any points for this because I'm giving you the answer!
+    hello.style.fontSize = '16px';
 
     // In JS all style properties are on the style property of an element. 
     // For example: 
@@ -198,45 +222,57 @@
     // with JS. Style the hello element use the following styles and more 
     // if you can think of any: 
     // fontSize, color, fontWeight, etc.
+    
+    // fontSize
+    hello.style.fontSize = '2rem';
+    updateScore(3000);
+
+    // color
+    hello.style.color = 'lightskyblue';
+    updateScore(3000);
+
+    // fontWeight
+    hello.style.fontWeight = 'bold';
+    updateScore(3000);
+
+    // backgroundColor
+    hello.style.backgroundColor = 'gold';
+    updateScore(3000);
 
 
     // TODO: There are two more elements above: div#name and div#display
     // If you can find these in this page give yourself another 650 points! 
-
-
-    // TODO: Make a reference to div#name declare a variable for this 
-    // with const.
-
+    updateScore(650);
 
     // TODO: If you were able to get the #name element give yourself 5000 points
-
-    // TODO: Make a reference to div#display
-
+    updateScore(5000);
 
     // TODO: If you used const give yourself 5000 points. 
     // If you use let give yourself 1000 points. If you used 
     // var subtract 100,000 points! If you didn't use cont, let, or var
     // subtract 1,000,000 points!
+    updateScore(5000);
 
 
     // Are you winning yet? 
+    console.log('winning');
 
     // TODO: Display your name in div#name use the reference 
     // you created earlier setting the .innerHTML property 
     // to your name variable that you defined above. 
     // Notice you haven't changed value of name? Good thing you
     // declared name with const! 
-
+    htmlName.innerHTML = `${name}`;
 
     // TODO: If you see your name give yourself 100000 points!
-
+    updateScore(100000);
 
     // TODO: Display your score in div#display be sure to use the 
     // reference you created earlier! 
-
+    htmlDisplay.innerHTML = `${name}`;
 
     // TODO: If you see your score give yourself 150000 points! 
-
+    updateScore(150000);
 
     // TODO: Style your name. Use the the element reference 
     // variable followed by .style and then by the name of 
@@ -249,12 +285,47 @@
     // you styled. Make it easy on yourself something like: 
     // score += numOfProps * 60000
 
+    // fontSize
+    htmlName.style.fontSize = '2rem';
+    updateScore(3000);
+
+    // color
+    htmlName.style.color = 'lightskyblue';
+    updateScore(3000);
+
+    // fontWeight
+    htmlName.style.fontWeight = 'bold';
+    updateScore(3000);
+
+    // backgroundColor
+    htmlName.style.backgroundColor = 'gold';
+    updateScore(3000);
+
+    let numOfProps = 4;
+    updateScore(numOfProps * 60000);
+
 
     // TODO: Style the score element. Follow the steps above! 
+    
+    // fontSize
+    htmlDisplay.style.fontSize = '2rem';
+    updateScore(3000);
 
+    // color
+    htmlDisplay.style.color = 'lightskyblue';
+    updateScore(3000);
 
+    // fontWeight
+    htmlDisplay.style.fontWeight = 'bold';
+    updateScore(3000);
+
+    // backgroundColor
+    htmlDisplay.style.backgroundColor = 'gold';
+    updateScore(3000);
+  
     // TODO: Give yourself some points 60000 for each property 
-    // that was styled. 
+    // that was styled.
+    updateScore(numOfProps * 60000);
 
 
     // Your final score my not be displayed. This is because 
@@ -271,10 +342,6 @@
       // some code here! 
     }
 
-    // TODO: Define a function to update the score call it: updateScore
-    // Something like: function updateScore(points) { ... }
-    
-
     // We favor camelCase in JS land! Think of it like a programming accent! 
     // In the example function above points is a parameter variable. 
     // It's value is set when we call the function. 
@@ -282,10 +349,9 @@
     // In the body of the function add points to your score
     // then update the div#display element to show the new value.
 
-
     // TODO: If you did that you get 50000 points! Call your function
     // here and give yourself some points. Something like: updateScore(50000)
-
+    updateScore(50000);
 
     // TODO: Go back to the top and find every place you added points 
     // Replace each line with a call to updateScore(0000) be sure to 
