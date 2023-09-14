@@ -20,6 +20,8 @@
     <div id="hello"></div>
     <h2 id="name"></h2>
     <div id="display"></div>
+    <input type="number" id="input-points">
+    <button id="add-points">Add Points</button>
 
   </section>
 
@@ -384,8 +386,12 @@
     // TODO: Make a reference for the input. Something 
     // like: const inputPoints = document.querySelector('#input-points')
 
+    const inputPoints = document.querySelector('#input-points');
+    console.log(inputPoints);
     // TODO: Make a reference to the button. Something 
     // like this: const addPoints = document.querySelector('#add-points')
+    const addPoints = document.querySelector('#add-points');
+    console.log(addPoints);
     
     // Notice the naming. These names are descriptive! 
 
@@ -397,6 +403,10 @@
     // you will listen for click events at the button. 
 
     // addPoints.addEventListener('click', <your-display-update-function-here>)
+    addPoints.addEventListener('click', function() {
+      const newPoints = parseInt(inputPoints.value);
+      updateScore(newPoints);
+    })
  
     // Modify your display update function. You need to
     // do the following: 
